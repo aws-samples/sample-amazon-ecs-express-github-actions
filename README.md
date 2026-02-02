@@ -77,10 +77,10 @@ git clone https://github.com/aws-samples/sample-amazon-ecs-express-github-action
 cd sample-amazon-ecs-express-github-actions
 
 # 2. Create ECR repository
-REPO_NAME="retail-store-sample-ui"
-echo "🏗️  Creating ECR repository: $REPO_NAME"
+ECR_REPOSITORY="my-app"
+echo "🏗️  Creating ECR repository: $ECR_REPOSITORY"
 aws ecr create-repository \
-    --repository-name $REPO_NAME \
+    --repository-name $ECR_REPOSITORY \
     --region $REGION \
     --image-scanning-configuration scanOnPush=true \
     --encryption-configuration encryptionType=AES256 \
